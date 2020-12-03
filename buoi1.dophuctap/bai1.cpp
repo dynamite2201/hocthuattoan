@@ -21,7 +21,7 @@ int main() {
 
         for (int i = A; i <= B; i++ ){
             int x = i;
-            for (int j = 0; j < cnt; j++) {
+            while(true) {
                 x = (x%10) * power + x/10;
                 if ((x > i) and (x <= B))
                 {
