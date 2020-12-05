@@ -19,11 +19,7 @@ int main() {
             cin>> g[i];
         }
 
-        int total = 0;
 
-        for (int i=0; i<N;i++) {
-            total = total +g[i];
-        }
         
         int cost = 0;
         int bag = 0;
@@ -42,6 +38,12 @@ int main() {
                 times = times + 1;
                 z = z -1;
             }
+        }
+
+// truong hop tau cho duoc het cac group 1 luc
+        int total = 0;
+        for (int i=0; i<N;i++) {
+            total = total +g[i];
         }
 
         if (k >= total) {
