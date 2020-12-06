@@ -11,7 +11,7 @@ int main() {
     for (int w = 0; w < T; w++) {
         int K, N;
         cin >> N >> K;
-        
+
         long long int V;
         cin >> V;
         
@@ -24,29 +24,22 @@ int main() {
             places[i] = nameOfPlace;
         }
 
-        int t = (V%N)*K;
+        int t = (V*K)%N;
 
-// xét hàng đợi chỉ còn t địa điểm.
-// lấy K điểm cuối trong hàng đợi t điểm này:
+// xét hàng đợi chỉ còn N+t địa điểm.
+// lấy K điểm cuối trong hàng đợi điểm này:
 
         cout <<"Case #"<< w+1 <<": ";
-        if (t==0) { 
-            for (int i=N-K; i<N;i++) {
-                
-                cout << places[i] << " ";
-            }
-        } else {
-            string newplaces[t];
+        string newplaces[N+t];
 
-            for (int i = 0; i < t; i++) {
-                newplaces[i] = places[i%N];
-            }
-            
-            for(int j=0; j<N;j++) {
-                for (int i=0; i<K;i++) {
-                    if(places[j] == newplaces[t-i-1])  
-                    cout << places[j] << " ";
-                }
+        for (int i = 0; i < N+t; i++) {
+            newplaces[i] = places[i%N];
+        }
+                    
+        for(int j=0; j<N;j++) {
+            for (int i=0; i<K;i++) {
+                if(places[j] == newplaces[N+t-i-1])  
+                cout << places[j] << " ";
             }
         }
         cout <<"\n";
