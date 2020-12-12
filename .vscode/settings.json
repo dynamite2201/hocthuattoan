@@ -4,6 +4,9 @@
         "algorithm": "cpp",
         "string": "cpp",
         "random": "cpp",
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "cmath": "cpp",
+        "complex": "cpp",
+        "ostream": "cpp"
     }
 }
