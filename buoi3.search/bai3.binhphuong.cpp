@@ -2,37 +2,38 @@
 #include <cmath>
 using namespace std;
 
+
+long long int countSmaller (long long int x) {
+    long long int count = 0;
+    for (long long int i = 1; i < 1e6; i++) {
+        if(x-i*i <= 0) break;
+        count += (long long int)sqrt(x - i*i);
+    }
+    return count;
+}
+
 int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0); cout.tie(0);
+    // freopen("input.txt", "r", stdin);
+    // freopen("output.txt", "w", stdout);
 
-    // long long int ID, K;
-    // cin >> ID >> K;
-    for (long long int K = 1; K < 100; K++){
-        cout << "So thu " << K << ": ";
+    long long int ID, K;
+    cin >> ID >> K;
 
-        long long int n = floor(sqrt(K));
-        
-        long long int  sodu;
-        sodu = K-n*n;
-
-        if (sodu == 0) {
-            cout << "cap so: (" << n << "," << 1 << ")  ";
-            cout << n*n +1 << "\n";
+    long long int left = 2;
+    long long int right = 2*1e12;
+    long long int res = 2*1e12;
+    long long int mid = -1;
+    while (left <= right) {
+        mid = left + (right - left)/2;
+        if (countSmaller(mid) >= K) {
+            res = mid;
+            right = mid - 1;
         } else {
-        
-            if(n%2 == 0 ){
-                long long int  dich = sodu/2;
-                long long int  z = (n+2)/2 - dich;
-                cout << "cap so: (" << z << "," << (n+2-z) << ")  ";
-                cout << z*z+(n+2-z)*(n+2-z)<< "\n";
-            }
-
-            if(n%2 == 1) {
-                long long int  dich = sodu/2-(1-sodu%2);
-                long long int  z = (n+2)/2 - dich;
-                cout << "cap so: (" << z << "," << (n+2-z) << ")  ";
-                cout << z*z+(n+2-z)*(n+2-z)<< "\n";
-            }    
+            left = mid + 1;
         }
     }
+    cout << res;
     return 0;
 }
