@@ -81,7 +81,11 @@ Số <img src="svgs/9c9fdc4c2227dafa78a577c8cc554cd9.svg?invert_in_darkmode" ali
 #### Bài 3
 * Dãy tăng <img src="svgs/bb3344fd34b5b34a751f89fb77f742aa.svg?invert_in_darkmode" align=middle width=30.422525099999987pt height=24.65753399999998pt/>
 <p align="center"><img src="svgs/7cad805ab0c9a5403b563973b9f529c6.svg?invert_in_darkmode" align=middle width=278.82421875pt height=16.438356pt/></p>
-  - Cần tìm: <img src="svgs/18388dd958853045e13e838cb9076390.svg?invert_in_darkmode" align=middle width=20.54082194999999pt height=14.15524440000002pt/>
+  - Cần tìm: 
+  
+  <img src="svgs/18388dd958853045e13e838cb9076390.svg?invert_in_darkmode" align=middle width=20.54082194999999pt height=14.15524440000002pt/>
+
+  
 * Dãy tăng <img src="svgs/ece3cbfa82d027419eb51dc4e8505433.svg?invert_in_darkmode" align=middle width=28.78816874999999pt height=24.65753399999998pt/> chứa đáp án:
 <p align="center"><img src="svgs/c561793fa59f0d6999b3ca5ae0924117.svg?invert_in_darkmode" align=middle width=172.69203105pt height=16.438356pt/></p>
 
