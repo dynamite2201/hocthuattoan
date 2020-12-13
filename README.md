@@ -95,6 +95,7 @@ Số <img src="svgs/9c9fdc4c2227dafa78a577c8cc554cd9.svg?invert_in_darkmode" ali
 - **Đáp án**:
   - Do <img src="svgs/68af6b41938000900ac651c4ed8cff31.svg?invert_in_darkmode" align=middle width=81.12832364999998pt height=24.65753399999998pt/> nên đáp án là:
 <p align="center"><img src="svgs/48ba87be7ded0954b4c732b8959c3094.svg?invert_in_darkmode" align=middle width=228.59061059999996pt height=16.438356pt/></p>
+
 ----
 
 
