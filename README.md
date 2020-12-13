@@ -70,6 +70,7 @@ Số <img src="svgs/9c9fdc4c2227dafa78a577c8cc554cd9.svg?invert_in_darkmode" ali
 - **Dãy tăng chứa đáp án**:
 - dãy tăng chứa đáp án: Tất cả số lượng chồng bánh có thể tạo ra từ dãy <img src="svgs/bb3344fd34b5b34a751f89fb77f742aa.svg?invert_in_darkmode" align=middle width=30.422525099999987pt height=24.65753399999998pt/>
 <p align="center"><img src="svgs/162ab714633198aea435b93f73697f2e.svg?invert_in_darkmode" align=middle width=201.98992275pt height=16.438356pt/></p>
+
 - **Điều kiện**: 
   - chỉ có thể sắp xếp mỗi chồng tối đa 2 bánh kem và bánh kem ở trên có trọng lượng tối đa bằng một nửa trọng lượng bánh đặt bên dưới.
 - **Đáp án**:
