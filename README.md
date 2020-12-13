@@ -102,6 +102,7 @@ Số <img src="svgs/9c9fdc4c2227dafa78a577c8cc554cd9.svg?invert_in_darkmode" ali
 - Làm sao để kiểm tra điều kiện là đúng hay sai?
   - Ví dụ ở bài 1 BINHPHUONG và bài 3 SOK: làm sao để kiểm tra <img src="svgs/d9162e040b2e7a5c73dcea8df05f231f.svg?invert_in_darkmode" align=middle width=51.85343954999998pt height=20.908638300000003pt/>
   - Ở bài 2 CAKE: Làm sao để kiểm tra nếu số chồng là <img src="svgs/332cc365a4987aacce0ead01b8bdcc0b.svg?invert_in_darkmode" align=middle width=9.39498779999999pt height=14.15524440000002pt/> thì có thỏa mãn điều kiện không?
+  
 #### Mã giả
 
 ```
