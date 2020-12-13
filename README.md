@@ -49,11 +49,11 @@ Xét dãy số  đã được sắp xếp từ ma trận <img src="svgs/cd554455
 
 Tìm số có thứ tự <img src="svgs/d6328eaebbcd5c358f426dbea4bdbf70.svg?invert_in_darkmode" align=middle width=15.13700594999999pt height=22.465723500000017pt/> là <img src="svgs/18388dd958853045e13e838cb9076390.svg?invert_in_darkmode" align=middle width=20.54082194999999pt height=14.15524440000002pt/> trong dãy trên:
 
-  - **dãy tăng:** <img src="svgs/6512cbd0d448700a036bf3a691c37acc.svg?invert_in_darkmode" align=middle width=16.81517804999999pt height=14.15524440000002pt/>
-  - **điều kiện:** 
-    - Số đó có thứ tự là $K$ (hay số đó bằng $a_K$)
-    - Điều kiện tương đương: Số đó là số bé nhất lớn hơn hoặc bằng $a_K$
-    - Điều kiện tương đương: Số đó là số bé nhất lớn hơn hoặc bằng $a_K$ và nằm trong $(b_n)$
+- **dãy tăng:** <img src="svgs/6512cbd0d448700a036bf3a691c37acc.svg?invert_in_darkmode" align=middle width=16.81517804999999pt height=14.15524440000002pt/>
+- **điều kiện:** 
+  - Số đó có thứ tự là <img src="svgs/d6328eaebbcd5c358f426dbea4bdbf70.svg?invert_in_darkmode" align=middle width=15.13700594999999pt height=22.465723500000017pt/> (hay số đó bằng <img src="svgs/18388dd958853045e13e838cb9076390.svg?invert_in_darkmode" align=middle width=20.54082194999999pt height=14.15524440000002pt/>)
+  - Điều kiện tương đương: Số đó là số bé nhất lớn hơn hoặc bằng <img src="svgs/18388dd958853045e13e838cb9076390.svg?invert_in_darkmode" align=middle width=20.54082194999999pt height=14.15524440000002pt/>
+  - Điều kiện tương đương: Số đó là số bé nhất lớn hơn hoặc bằng <img src="svgs/18388dd958853045e13e838cb9076390.svg?invert_in_darkmode" align=middle width=20.54082194999999pt height=14.15524440000002pt/> và nằm trong <img src="svgs/ece3cbfa82d027419eb51dc4e8505433.svg?invert_in_darkmode" align=middle width=28.78816874999999pt height=24.65753399999998pt/>
 
 
 
@@ -65,16 +65,15 @@ Số <img src="svgs/9c9fdc4c2227dafa78a577c8cc554cd9.svg?invert_in_darkmode" ali
 
 ---
 #### Bài 2
-- **Dãy khối lượng các bánh:**
+- Dãy khối lượng các bánh:
   <p align="center"><img src="svgs/41f1d2792f0c83c512dcaa84b65f35e1.svg?invert_in_darkmode" align=middle width=136.89888135pt height=16.438356pt/></p>
 - **Dãy tăng chứa đáp án**:
-  - dãy tăng chứa đáp án: Tất cả số lượng chồng bánh có thể tạo ra từ dãy <img src="svgs/bb3344fd34b5b34a751f89fb77f742aa.svg?invert_in_darkmode" align=middle width=30.422525099999987pt height=24.65753399999998pt/>
+- dãy tăng chứa đáp án: Tất cả số lượng chồng bánh có thể tạo ra từ dãy <img src="svgs/bb3344fd34b5b34a751f89fb77f742aa.svg?invert_in_darkmode" align=middle width=30.422525099999987pt height=24.65753399999998pt/>
 <p align="center"><img src="svgs/162ab714633198aea435b93f73697f2e.svg?invert_in_darkmode" align=middle width=201.98992275pt height=16.438356pt/></p>
-
 - **Điều kiện**: 
   - chỉ có thể sắp xếp mỗi chồng tối đa 2 bánh kem và bánh kem ở trên có trọng lượng tối đa bằng một nửa trọng lượng bánh đặt bên dưới.
-
 - **Đáp án**:
+
 <p align="center"><img src="svgs/fb153135178e5fc41d03ede4adb32f4c.svg?invert_in_darkmode" align=middle width=600.02976165pt height=16.438356pt/></p>
 
 ----
@@ -82,7 +81,6 @@ Số <img src="svgs/9c9fdc4c2227dafa78a577c8cc554cd9.svg?invert_in_darkmode" ali
 * Dãy tăng <img src="svgs/bb3344fd34b5b34a751f89fb77f742aa.svg?invert_in_darkmode" align=middle width=30.422525099999987pt height=24.65753399999998pt/>
 <p align="center"><img src="svgs/7cad805ab0c9a5403b563973b9f529c6.svg?invert_in_darkmode" align=middle width=278.82421875pt height=16.438356pt/></p>
   - Cần tìm: <img src="svgs/18388dd958853045e13e838cb9076390.svg?invert_in_darkmode" align=middle width=20.54082194999999pt height=14.15524440000002pt/>
-
 * Dãy tăng <img src="svgs/ece3cbfa82d027419eb51dc4e8505433.svg?invert_in_darkmode" align=middle width=28.78816874999999pt height=24.65753399999998pt/> chứa đáp án:
 <p align="center"><img src="svgs/c561793fa59f0d6999b3ca5ae0924117.svg?invert_in_darkmode" align=middle width=172.69203105pt height=16.438356pt/></p>
 
@@ -97,15 +95,13 @@ Số <img src="svgs/9c9fdc4c2227dafa78a577c8cc554cd9.svg?invert_in_darkmode" ali
 - **Đáp án**:
   - Do <img src="svgs/68af6b41938000900ac651c4ed8cff31.svg?invert_in_darkmode" align=middle width=81.12832364999998pt height=24.65753399999998pt/> nên đáp án là:
 <p align="center"><img src="svgs/48ba87be7ded0954b4c732b8959c3094.svg?invert_in_darkmode" align=middle width=228.59061059999996pt height=16.438356pt/></p>
-
----------
-
+----
 #### Phân tích:
-  - **Khó ở 2 điểm**:
-    - Tìm dãy tăng chứa đáp án
-    - Làm sao để kiểm tra điều kiện là đúng hay sai?
-      - Ví dụ ở bài 1 BINHPHUONG và bài 3 SOK: làm sao để kiểm tra $x \ge a_K$
-      - Ở bài 2 CAKE: Làm sao để kiểm tra nếu số chồng là $x$ thì có thỏa mãn điều kiện không?
+**Khó ở 2 điểm**:
+- Tìm dãy tăng chứa đáp án
+- Làm sao để kiểm tra điều kiện là đúng hay sai?
+  - Ví dụ ở bài 1 BINHPHUONG và bài 3 SOK: làm sao để kiểm tra <img src="svgs/d9162e040b2e7a5c73dcea8df05f231f.svg?invert_in_darkmode" align=middle width=51.85343954999998pt height=20.908638300000003pt/>
+  - Ở bài 2 CAKE: Làm sao để kiểm tra nếu số chồng là <img src="svgs/332cc365a4987aacce0ead01b8bdcc0b.svg?invert_in_darkmode" align=middle width=9.39498779999999pt height=14.15524440000002pt/> thì có thỏa mãn điều kiện không?
 #### Mã giả
 
 ```

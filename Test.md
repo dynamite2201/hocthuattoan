@@ -49,11 +49,11 @@ $$(a_{n}) = {2, 5, 5, 8, 10, 10, 13, 13, 17, 17, 18,...}$$
 
 Tìm số có thứ tự $K$ là $a_K$ trong dãy trên:
 
-  - **dãy tăng:** $a_n$
-  - **điều kiện:** 
-    - Số đó có thứ tự là $K$ (hay số đó bằng $a_K$)
-    - Điều kiện tương đương: Số đó là số bé nhất lớn hơn hoặc bằng $a_K$
-    - Điều kiện tương đương: Số đó là số bé nhất lớn hơn hoặc bằng $a_K$ và nằm trong $(b_n)$
+- **dãy tăng:** $a_n$
+- **điều kiện:** 
+  - Số đó có thứ tự là $K$ (hay số đó bằng $a_K$)
+  - Điều kiện tương đương: Số đó là số bé nhất lớn hơn hoặc bằng $a_K$
+  - Điều kiện tương đương: Số đó là số bé nhất lớn hơn hoặc bằng $a_K$ và nằm trong $(b_n)$
 
 
 
@@ -97,11 +97,11 @@ $$(b_n) = 3,4,5,6,7,...,3K$$
 $$ X = \min\{x \ge a_K, x \in b_n\} = a_K$$
 ----
 #### Phân tích:
-  - **Khó ở 2 điểm**:
-    - Tìm dãy tăng chứa đáp án
-    - Làm sao để kiểm tra điều kiện là đúng hay sai?
-      - Ví dụ ở bài 1 BINHPHUONG và bài 3 SOK: làm sao để kiểm tra $x \ge a_K$
-      - Ở bài 2 CAKE: Làm sao để kiểm tra nếu số chồng là $x$ thì có thỏa mãn điều kiện không?
+**Khó ở 2 điểm**:
+- Tìm dãy tăng chứa đáp án
+- Làm sao để kiểm tra điều kiện là đúng hay sai?
+  - Ví dụ ở bài 1 BINHPHUONG và bài 3 SOK: làm sao để kiểm tra $x \ge a_K$
+  - Ở bài 2 CAKE: Làm sao để kiểm tra nếu số chồng là $x$ thì có thỏa mãn điều kiện không?
 #### Mã giả
 
 $$
