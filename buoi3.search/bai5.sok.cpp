@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
 
 
@@ -14,26 +13,24 @@ long long int calc (long long int K) {
     long long int left = 3;
     long long int right = 3*K;
 
-    while (left <= right) {
-        long long int X = left + (right - left)/2;
-        long long int  index = FindIndexOf(X);
+    while (left < right) {
+        long long int mid = left + (right - left)/2;
+        long long int  index = FindIndexOf(mid);
 
-        if (index==K and (X%3==0 or X%5==0 or X%7==0))
-            return X;
-        
-        if (index < K)
-            left = X + 1;
+        if (FindIndexOf(mid)>=K)
+            right = mid;
         else
-            right = X - 1;
+            left = mid + 1;
     }
-    return 0;
+    return right;
 }
 
 int main() {
-    ios_base::sync_with_stdio(0);
-    cin.tie(0); cout.tie(0);
-    // freopen("input.txt", "r", stdin);
-    // freopen("output.txt", "w", stdout);
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr); cout.tie(nullptr);
+    
+    //  freopen("input.txt", "r", stdin);
+    //  freopen("output.txt", "w", stdout);
 
     long long int ID, K;
     cin >> ID >> K;

@@ -53,12 +53,12 @@ inline int mrand(int k) {return abs((int) mt()) % k;}
 
 
 void solve() {
-    
+
 }
 
 int main() {
-    ios_base::sync_with_stdio(0);
-    cin.tie(0); cout.tie(0);
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr); cout.tie(nullptr);
     // freopen("input.txt", "r", stdin);
     // freopen("output.txt", "w", stdout);
 
@@ -88,6 +88,6 @@ int main() {
         index =0;
     }
 
-        // cout << "Case #" << t  << ": ";
-        // solve();
+    // cout << "Case #" << t  << ": ";
+    // solve();
 }

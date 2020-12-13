@@ -23,17 +23,16 @@ int main() {
 
     long long int left = 2;
     long long int right = 2*1e12;
-    long long int res = 2*1e12;
-    long long int mid = -1;
-    while (left <= right) {
-        mid = left + (right - left)/2;
-        if (countSmaller(mid) >= K) {
-            res = mid;
-            right = mid - 1;
-        } else {
-            left = mid + 1;
-        }
+
+    while (left < right) {
+        long long int mid = left + (right - left)/2;
+        if (countSmaller(mid) >= K)
+            right = mid;
+        else
+            left = mid + 1;  
     }
-    cout << res;
+    
+    cout << right;
+
     return 0;
 }
