@@ -32,24 +32,24 @@ g++ -o output test.cpp
 **Bài 3:** [SOK](https://v2.bigocoder.com/courses/45/lectures/598/problems/1127?view=statement)
 
 #### Điểm chung của các bài toán:
-  - Thường có một **dãy tăng** <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/6512cbd0d448700a036bf3a691c37acc.svg?invert_in_darkmode" align=middle width=16.81517804999999pt height=14.15524440000002pt/>
+  - Thường có một **dãy tăng** $a_n$
   - Tìm một số thỏa mãn **điều kiện** nào đó (thường là: "Tìm số bé nhất thỏa mãn...")
 
   **Sử dụng Binary Search như sau:**
-  - Tìm một **dãy tăng chứa đáp án** cần tìm (thường chứa luôn dãy <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/6512cbd0d448700a036bf3a691c37acc.svg?invert_in_darkmode" align=middle width=16.81517804999999pt height=14.15524440000002pt/>)
+  - Tìm một **dãy tăng chứa đáp án** cần tìm (thường chứa luôn dãy $a_n$)
   - Dùng **Binary search** tìm ra đáp án cần tìm dựa vào **điêù kiện**
 ---
 
 #### Bài 1
 
 
-Xét dãy số  đã được sắp xếp từ ma trận <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/cd5544558e1b8fda2122c6528964588d.svg?invert_in_darkmode" align=middle width=143.73913949999996pt height=26.76175259999998pt/>:
+Xét dãy số  đã được sắp xếp từ ma trận $A =(i^2 + j^2)_{10^6 \times 10^6}$:
 
-<p align="center"><img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/1a7225afdae8c5382a16b927db7f28e3.svg?invert_in_darkmode" align=middle width=294.34931129999995pt height=16.438356pt/></p>
+$$(a_{n}) = {2, 5, 5, 8, 10, 10, 13, 13, 17, 17, 18,...}$$
 
-Tìm số có thứ tự <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/d6328eaebbcd5c358f426dbea4bdbf70.svg?invert_in_darkmode" align=middle width=15.13700594999999pt height=22.465723500000017pt/> là <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/18388dd958853045e13e838cb9076390.svg?invert_in_darkmode" align=middle width=20.54082194999999pt height=14.15524440000002pt/> trong dãy trên:
+Tìm số có thứ tự $K$ là $a_K$ trong dãy trên:
 
-  - **dãy tăng:** <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/6512cbd0d448700a036bf3a691c37acc.svg?invert_in_darkmode" align=middle width=16.81517804999999pt height=14.15524440000002pt/>
+  - **dãy tăng:** $a_n$
   - **điều kiện:** 
     - Số đó có thứ tự là $K$ (hay số đó bằng $a_K$)
     - Điều kiện tương đương: Số đó là số bé nhất lớn hơn hoặc bằng $a_K$
@@ -57,44 +57,44 @@ Tìm số có thứ tự <img src="https://rawgit.com/nvson2201/hocthuattoan/mai
 
 
 
-Dùng Binary search, tìm trong dãy: <p align="center"><img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/d7f9432e75e2f552763a7ef224f991b3.svg?invert_in_darkmode" align=middle width=160.61457719999999pt height=18.312383099999998pt/></p>
+Dùng Binary search, tìm trong dãy: $$(b_n) = 2,3, 4,...,2.10^{12}$$
 
-Số <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/9c9fdc4c2227dafa78a577c8cc554cd9.svg?invert_in_darkmode" align=middle width=50.180624999999985pt height=22.831056599999986pt/> thỏa mãn: <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/cbfb1b2a33b28eab8a3e59464768e810.svg?invert_in_darkmode" align=middle width=14.908688849999992pt height=22.465723500000017pt/> là số bé nhất trong các số lớn hơn <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/18388dd958853045e13e838cb9076390.svg?invert_in_darkmode" align=middle width=20.54082194999999pt height=14.15524440000002pt/>. Do dãy <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/f9d4c35781241262224c794779ff37d6.svg?invert_in_darkmode" align=middle width=54.73554239999999pt height=22.831056599999986pt/> suy ra <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/68d2bebcd562b4ae5c84ad7e7ccb71e2.svg?invert_in_darkmode" align=middle width=57.36711914999999pt height=22.465723500000017pt/>
+Số $X \in b_n$ thỏa mãn: $X$ là số bé nhất trong các số lớn hơn $a_K$. Do dãy $a_n \subset b_n$ suy ra $X = a_K$
 
-<p align="center"><img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/48ba87be7ded0954b4c732b8959c3094.svg?invert_in_darkmode" align=middle width=228.59061059999996pt height=16.438356pt/></p>
+$$ X = \min\{x \ge a_K, x \in b_n\} = a_K$$
 
 ---
 #### Bài 2
 - Dãy khối lượng các bánh:
-  <p align="center"><img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/41f1d2792f0c83c512dcaa84b65f35e1.svg?invert_in_darkmode" align=middle width=136.89888135pt height=16.438356pt/></p>
+  $$(a_n)=a_1, a_2,...,a_n$$
 - **Dãy tăng chứa đáp án**:
-- dãy tăng chứa đáp án: Tất cả số lượng chồng bánh có thể tạo ra từ dãy <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/bb3344fd34b5b34a751f89fb77f742aa.svg?invert_in_darkmode" align=middle width=30.422525099999987pt height=24.65753399999998pt/>
-<p align="center"><img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/162ab714633198aea435b93f73697f2e.svg?invert_in_darkmode" align=middle width=201.98992275pt height=16.438356pt/></p>
+- dãy tăng chứa đáp án: Tất cả số lượng chồng bánh có thể tạo ra từ dãy $(a_n)$
+$$(m_k) =m_1< m_2 <... < m_k$$
 - **Điều kiện**: 
   - chỉ có thể sắp xếp mỗi chồng tối đa 2 bánh kem và bánh kem ở trên có trọng lượng tối đa bằng một nửa trọng lượng bánh đặt bên dưới.
 - **Đáp án**:
 
-<p align="center"><img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/fb153135178e5fc41d03ede4adb32f4c.svg?invert_in_darkmode" align=middle width=600.02976165pt height=16.438356pt/></p>
+$$ X = \min\{x,chồng \ tối \ đa \ 2 \ bánh \ kem , \ kl \ bánh \ trên <=1/2 \ kl \ bánh \ dưới , x \in m_k\} = a_K$$
 
 ----
 #### Bài 3
-* Dãy tăng <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/bb3344fd34b5b34a751f89fb77f742aa.svg?invert_in_darkmode" align=middle width=30.422525099999987pt height=24.65753399999998pt/>
-<p align="center"><img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/7cad805ab0c9a5403b563973b9f529c6.svg?invert_in_darkmode" align=middle width=278.82421875pt height=16.438356pt/></p>
-  - Cần tìm: <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/18388dd958853045e13e838cb9076390.svg?invert_in_darkmode" align=middle width=20.54082194999999pt height=14.15524440000002pt/>
-* Dãy tăng <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/ece3cbfa82d027419eb51dc4e8505433.svg?invert_in_darkmode" align=middle width=28.78816874999999pt height=24.65753399999998pt/> chứa đáp án:
-<p align="center"><img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/c561793fa59f0d6999b3ca5ae0924117.svg?invert_in_darkmode" align=middle width=172.69203105pt height=16.438356pt/></p>
+* Dãy tăng $(a_n)$
+$$(a_n) = 3,5,6,7,8,10,12,14,15,18,20...$$
+  - Cần tìm: $a_K$
+* Dãy tăng $(b_n)$ chứa đáp án:
+$$(b_n) = 3,4,5,6,7,...,3K$$
 
-    - $a_K \le 3K$, quy nạp: điều kiện đầu đúng $a_1 = 3.1$. Giả sử đúng đến $K$ thì $a_K+1, a_K+2, a_K+3$ sẽ có một số là $a_{K+1}$ vì trong $3$ số có một số chia hết cho $3$. Nhưng cả $3$ số đều không quá $3(K+1)$. Ta có đpcm.
-  - Hoặc đơn giản là quan sát dãy: <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/2c329f4ccb56d63dd5a078bfdcebe413.svg?invert_in_darkmode" align=middle width=115.60497959999998pt height=24.65753399999998pt/> đương nhiên dãy <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/adee21fad675f83c06223fa42e6022a4.svg?invert_in_darkmode" align=middle width=62.245839149999995pt height=17.723762100000005pt/> vì giữa các số chia hết cho <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/5dc642f297e291cfdde8982599601d7e.svg?invert_in_darkmode" align=middle width=8.219209349999991pt height=21.18721440000001pt/> này vẫn còn các khe hở cho các số chia hết <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/a37833a5494dbc3407c97f8d3239d766.svg?invert_in_darkmode" align=middle width=23.744301899999993pt height=21.18721440000001pt/> cho nên khi đếm đến <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/e174358fb892b6a64d40bb2a8cada9a4.svg?invert_in_darkmode" align=middle width=18.965471249999986pt height=14.15524440000002pt/> rồi thì <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/18388dd958853045e13e838cb9076390.svg?invert_in_darkmode" align=middle width=20.54082194999999pt height=14.15524440000002pt/> vẫn là một số ở ke hở nào đó trước số <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/e174358fb892b6a64d40bb2a8cada9a4.svg?invert_in_darkmode" align=middle width=18.965471249999986pt height=14.15524440000002pt/>.
+  - $a_K \le 3K$, quy nạp: điều kiện đầu đúng $a_1 = 3.1$. Giả sử đúng đến $K$ thì $a_K+1, a_K+2, a_K+3$ sẽ có một số là $a_{K+1}$ vì trong $3$ số có một số chia hết cho $3$. Nhưng cả $3$ số đều không quá $3(K+1)$. Ta có đpcm.
+  - Hoặc đơn giản là quan sát dãy: $(c_n) = 3,6,9,....$ đương nhiên dãy $c_K > a_K$ vì giữa các số chia hết cho $3$ này vẫn còn các khe hở cho các số chia hết $5,7$ cho nên khi đếm đến $c_K$ rồi thì $a_K$ vẫn là một số ở ke hở nào đó trước số $c_K$.
 
 * **Điều kiện**:
-  - Số đó có thứ tự là <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/d6328eaebbcd5c358f426dbea4bdbf70.svg?invert_in_darkmode" align=middle width=15.13700594999999pt height=22.465723500000017pt/> (hay số đó bằng <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/18388dd958853045e13e838cb9076390.svg?invert_in_darkmode" align=middle width=20.54082194999999pt height=14.15524440000002pt/>)
-  - Điều kiện tương đương: Số đó là số bé nhất lớn hơn hoặc bằng <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/18388dd958853045e13e838cb9076390.svg?invert_in_darkmode" align=middle width=20.54082194999999pt height=14.15524440000002pt/>
-  - Điều kiện tương đương: Số đó là số bé nhất lớn hơn hoặc bằng <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/18388dd958853045e13e838cb9076390.svg?invert_in_darkmode" align=middle width=20.54082194999999pt height=14.15524440000002pt/> và nằm trong <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/ece3cbfa82d027419eb51dc4e8505433.svg?invert_in_darkmode" align=middle width=28.78816874999999pt height=24.65753399999998pt/>
+  - Số đó có thứ tự là $K$ (hay số đó bằng $a_K$)
+  - Điều kiện tương đương: Số đó là số bé nhất lớn hơn hoặc bằng $a_K$
+  - Điều kiện tương đương: Số đó là số bé nhất lớn hơn hoặc bằng $a_K$ và nằm trong $(b_n)$
 
 - **Đáp án**:
-  - Do <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/68af6b41938000900ac651c4ed8cff31.svg?invert_in_darkmode" align=middle width=81.12832364999998pt height=24.65753399999998pt/> nên đáp án là:
-<p align="center"><img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/48ba87be7ded0954b4c732b8959c3094.svg?invert_in_darkmode" align=middle width=228.59061059999996pt height=16.438356pt/></p>
+  - Do $(a_n) \subset (b_n)$ nên đáp án là:
+$$ X = \min\{x \ge a_K, x \in b_n\} = a_K$$
 ----
 #### Phân tích:
   - **Khó ở 2 điểm**:
@@ -103,49 +103,34 @@ Số <img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/9c9fdc4c2227d
       - Ví dụ ở bài 1 BINHPHUONG và bài 3 SOK: làm sao để kiểm tra $x \ge a_K$
       - Ở bài 2 CAKE: Làm sao để kiểm tra nếu số chồng là $x$ thì có thỏa mãn điều kiện không?
 #### Mã giả
----
-header-includes:
-  - \usepackage{algorithm2e}
----
+
+$$
 ---
 header-includes:
   - \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
 ---
 # Algorithm 1
 Just a sample algorithmn
-<p align="center"><img src="https://rawgit.com/nvson2201/hocthuattoan/main/svgs/8946c347b3f737b65df06f333c3e6cf4.svg?invert_in_darkmode" align=middle width=700.27450845pt height=55.8904104pt/></p> 
-
-
-
-
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-
-
-
-
-
-
+\begin{algorithm}[H]
+\DontPrintSemicolon
+\SetAlgoLined
+\KwResult{Write here the result}
+\SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
+\Input{Write here the input}
+\Output{Write here the output}
+\BlankLine
+\While{While condition}{
+    instructions\;
+    \eIf{condition}{
+        instructions1\;
+        instructions2\;
+    }{
+        instructions3\;
+    }
+}
+\caption{While loop with If/Else condition}
+\end{algorithm}
+$$
 
 
 
