@@ -59,15 +59,15 @@ inline int mrand(int k) {return abs((int) mt()) % k;}
 
 
 bool check(){
-
+    return false;
 }
 
-long long int Findt(){
+ll Findt(){
     // max M = 30000 * 15000 = 450000000
-    long long int L = 0, Right = 7000000000000000000;
+    ll L = 0, Right = LINF; // (ll) 1e18 + 23111992;
 
     while(L < Right){
-        long long int mid = L + (Right-L) / 2;
+        ll mid = L + (Right-L) / 2;
         if(check()){
             Right = mid;
         }
@@ -81,13 +81,13 @@ long long int Findt(){
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr); cout.tie(nullptr);
-    // freopen("inputbai4.txt", "r", stdin);
-    // freopen("outputbai4.txt", "w", stdout);
+    freopen("inputbaix.txt", "r", stdin);
+    freopen("outputbaix.txt", "w", stdout);
 
-    int testCase;
+    ll testCase;
     cin >> testCase;
     
-    for (int t = 1; t <= testCase; t++) {
+    for (ll t = 1; t <= testCase; t++) {
 
         cout << "Case #" << t  << ": " << Findt() << "\n";
     }

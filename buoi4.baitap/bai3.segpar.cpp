@@ -1,97 +1,84 @@
 #include <bits/stdc++.h>
-#include<math.h>
-#include <cmath>
-#include <algorithm>
-#include <vector>
-#include <iomanip>
-#include <string>
 using namespace std;
-//#pragma GCC optimize("Ofast")
-//#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
-
-#define ms(s, n) memset(s, n, sizeof(s))
-#define FOR(i, a, b) for (int i = (a); i < (b); ++i)
-#define FORd(i, a, b) for (int i = (a) - 1; i >= (b); --i)
-#define FORall(it, a) for (__typeof((a).begin()) it = (a).begin(); it != (a).end(); it++)
-#define sz(a) int((a).size())
-#define present(t, x) (t.find(x) != t.end())
-#define all(a) (a).begin(), (a).end()
-#define uni(a) (a).erase(unique(all(a)), (a).end())
-#define pb push_back
-#define pf push_front
-#define mp make_pair
-#define fi first
-#define se second
-#define prec(n) fixed<<setprecision(n)
-#define bit(n, i) (((n) >> (i)) & 1)
-#define bitcount(n) __builtin_popcountll(n)
-typedef long long ll;
-typedef unsigned long long ull;
-typedef long double ld;
-typedef pair<int, int> pi;
-typedef vector<int> vi;
-typedef vector<pi> vii;
-const int MOD = (int) 1e9 + 7;
-const int FFTMOD = 119 << 23 | 1;
-const int INF = (int) 1e9 + 23111992;
-const ll LINF = (ll) 1e18 + 23111992;
-const ld PI = acos((ld) -1);
-const ld EPS = 1e-6;
-inline ll gcd(ll a, ll b) {ll r; while (b) {r = a % b; a = b; b = r;} return a;}
-inline ll lcm(ll a, ll b) {return a / gcd(a, b) * b;}
-inline ll fpow(ll n, ll k, int p = MOD) {ll r = 1; for (; k; k >>= 1) {if (k & 1) r = r * n % p; n = n * n % p;} return r;}
-template<class T> inline int chkmin(T& a, const T& val) {return val < a ? a = val, 1 : 0;}
-template<class T> inline int chkmax(T& a, const T& val) {return a < val ? a = val, 1 : 0;}
-inline ull isqrt(ull k) {ull r = sqrt(k) + 1; while (r * r > k) r--; return r;}
-inline ll icbrt(ll k) {ll r = cbrt(k) + 1; while (r * r * r > k) r--; return r;}
-inline void addmod(int& a, int val, int p = MOD) {if ((a = (a + val)) >= p) a -= p;}
-inline void submod(int& a, int val, int p = MOD) {if ((a = (a - val)) < 0) a += p;}
-inline int mult(int a, int b, int p = MOD) {return (ll) a * b % p;}
-inline int inv(int a, int p = MOD) {return fpow(a, p - 2, p);}
-inline int sign(ld x) {return x < -EPS ? -1 : x > +EPS;}
-inline int sign(ld x, ld y) {return sign(x - y);}
-mt19937 mt(chrono::high_resolution_clock::now().time_since_epoch().count());
-inline int mrand() {return abs((int) mt());}
-inline int mrand(int k) {return abs((int) mt()) % k;}
-#define db(x) cerr << "[" << #x << ": " << (x) << "] ";
-#define endln cerr << "\n";
-
-
-
-bool check(){
-
-}
-
-long long int Findt(){
-    // max M = 30000 * 15000 = 450000000
-    long long int L = 0, Right = LINF; // (ll) 1e18 + 23111992;
-
-    while(L < Right){
-        long long int mid = L + (Right-L) / 2;
-        if(check()){
-            Right = mid;
+ 
+const int N = 1e5 + 10;
+ 
+class FenwickTree {
+private:
+    int mi[N], ma[N];
+public:
+    void init() {
+        for (int i = 0; i < N; ++i) {
+            mi[i] = 1e9; ma[i] = -1e9;
         }
-        else L = mid + 1;
     }
-    return Right;
+    void update(bool t, int x, int value) {
+        for (; x > 0; x -= x & -x)
+            if (t) ma[x] = max(ma[x], value); else mi[x] = min(mi[x], value);
+    }
+    int get(bool t, int x) {
+        int res = t ? -1e9 : 1e9;
+        for (; x < N; x += x & -x)
+            if (t) res = max(res, ma[x]); else res = min(res, mi[x]);
+        return res;
+    }
+} bit;
+ 
+int n, k, m;
+int a[N], val[N];
+pair <int, int> b[N];
+ 
+void load() {
+    scanf("%d%d", &n, &k);
+    for (int i = 1; i <= n; ++i) {
+        scanf("%d", a + i);
+        a[i] += a[i - 1];
+        b[i] = make_pair(a[i], i);
+    }
 }
-
-
-
+ 
+void init() {
+    sort(b, b + n + 1);
+    for (int i = 0; i <= n; ++i) {
+        if (!i || b[i].first != b[i - 1].first) m++;
+        val[m] = b[i].first; a[b[i].second] = m;
+    }
+}
+ 
+bool ok(int lim) {
+    bit.init();
+    int mi, ma;
+    bit.update(0, a[0], 0); bit.update(1, a[0], 0);
+    for (int i = 1; i <= n; ++i) {
+        int tmp = lower_bound(val + 1, val + m + 1, val[a[i]] - lim) - val;
+        mi = bit.get(0, tmp) + 1; ma = bit.get(1, tmp) + 1;
+      //  cout << i << " " << mi << " " << ma << "\n";
+        bit.update(0, a[i], mi); bit.update(1, a[i], ma);
+    }
+    return mi <= k && k <= ma;
+}
+ 
+void process() {
+    int l = -1e9, r = 1e9, answer;
+    while (l <= r) {
+        int mid = (l + r) >> 1;
+        if (ok(mid)) {
+            answer = mid;
+            r = mid - 1;
+        } else {
+            l = mid + 1;
+        }
+    }
+    printf("%d\n", answer);
+}
+ 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr); cout.tie(nullptr);
-    freopen("inputbai4.txt", "r", stdin);
-    freopen("outputbai4.txt", "w", stdout);
-
-    // int testCase;
-    // cin >> testCase;
-    
-    // for (int t = 1; t <= testCase; t++) {
-
-    //     cout << "Case #" << t  << ": " << Findt() << "\n";
-    // }
-
-
-
+   // freopen("input.in", "r", stdin);
+//    freopen("output.out", "w", stdout);
+ 
+    load();
+    init();
+    process();
+ 
+    return 0;
 }
