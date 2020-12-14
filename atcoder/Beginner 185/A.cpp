@@ -1,4 +1,7 @@
 #include <bits/stdc++.h>
+#include<algorithm>
+#include<math.h>
+#include<cmath>
 using namespace std;
 //#pragma GCC optimize("Ofast")
 //#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
@@ -51,43 +54,23 @@ inline int mrand(int k) {return abs((int) mt()) % k;}
 #define endln cerr << "\n";
 
 
-
-void solve() {
-
+int solve(int A1, int A2, int A3, int A4) {
+    int a[4] = {A1,A2,A3,A4};
+    sort(a, a+4);
+    return a[0];
 }
 
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr); cout.tie(nullptr);
-    // freopen("input.txt", "r", stdin);
-    // freopen("output.txt", "w", stdout);
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
 
-    // int tc = 2;
-    int tc;
-    cin >> tc;
-    int curr = 0;
-    int index = 0;
-    int n, k;
-    for (int t = 1; t <= tc; t++) {
+    int A1,A2,A3,A4;
 
-        cin >> n >> k;
-        char arr[3] = {'a','b','c'};
-        // string arr = "abc";
+    cin >>A1 >> A2 >> A3 >>A4;
 
-        while(n>0) {
-            cout << arr[index];
-            curr++;
-            n--;
-            if(curr == k) {
-                index ++;
-                curr = 0;
-            }
-        }
-        cout << "\n";
-        curr = 0;
-        index =0;
-    }
-
-    // cout << "Case #" << t  << ": ";
-    // solve();
+    cout << solve(A1,A2,A3,A4);
+    
+    return 0;
 }
