@@ -68,12 +68,50 @@ int main() {
     // freopen("input.txt", "r", stdin);
     // freopen("output.txt", "w", stdout);
 
-    // int testCase;
-    // cin >> testCase;
+
+
+    int testCase;
+    cin >> testCase;
 
  
-    // for (int t = 1; t <= testCase; t++) {
-    //     // cout << "Case #" << t  << ": ";
-    //     // solve();
-    // }
+    for (int t = 1; t <= testCase; t++) {
+        // cout << "Case #" << t  << ": ";
+        // solve();
+        int n;
+        cin >> n;
+        
+        if(n>45) {
+            cout << -1 ;
+        } else {
+            if(n<=9) {
+                cout << n;
+            } else {
+                int sub = 9;
+                int a[10]={-1};
+                int index = 0;
+                while(n!=0) {
+                    if(n<sub) {
+                        a[index] = n;
+                        break;
+                    }
+                    a[index] = sub;
+                    index ++;
+
+                    n = n - sub;
+                    sub--;
+                }
+                for(int i=9;i>=0;i--) {
+                    if(a[i] !=-1 && a[i] !=0){
+                        cout <<a[i];
+                    }
+                }
+
+            }
+        }
+
+
+
+        cout << "\n";
+
+    }
 }

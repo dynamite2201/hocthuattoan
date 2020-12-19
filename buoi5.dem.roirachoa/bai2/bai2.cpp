@@ -67,13 +67,38 @@ int main() {
     cin.tie(nullptr); cout.tie(nullptr);
     // freopen("input.txt", "r", stdin);
     // freopen("output.txt", "w", stdout);
+    int n;
+    cin>>n;
+    int a[n],b[n];
+    for (int i=0;i<n;i++) {
+        cin>>a[i]>>b[i];
+    }
+    int c[1001]={-1};
 
-    // int testCase;
-    // cin >> testCase;
+    for(int i =0;i<n;i++) {
+        if(a[i]<b[i]) {
+            for(int j=a[i];j<b[i];j++) {
+                c[j+1]++;
+            }
+        } else {
+            for(int j=a[i];j>b[i];j--) {
+                c[j]++;
+            }
+        }
 
- 
-    // for (int t = 1; t <= testCase; t++) {
-    //     // cout << "Case #" << t  << ": ";
-    //     // solve();
-    // }
+    }
+
+    sort(c+1,c+1001,std::greater<int>());
+
+    // cout <<c[1];
+    int  res =0;
+    
+    for (int i=1;i<1001;i++) {
+        if(c[i]==c[1]) {
+            res++;
+        }
+    }
+    cout <<res;
+
+
 }

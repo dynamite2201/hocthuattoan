@@ -5,6 +5,7 @@
 #include <vector>
 #include <iomanip>
 #include <string>
+#include <typeinfo>
 using namespace std;
 //#pragma GCC optimize("Ofast")
 //#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
@@ -68,12 +69,72 @@ int main() {
     // freopen("input.txt", "r", stdin);
     // freopen("output.txt", "w", stdout);
 
-    // int testCase;
-    // cin >> testCase;
+
+
+    int testCase;
+    cin >> testCase;
 
  
-    // for (int t = 1; t <= testCase; t++) {
-    //     // cout << "Case #" << t  << ": ";
-    //     // solve();
-    // }
+    for (int t = 1; t <= testCase; t++) {
+
+        int n;
+        cin >> n;
+
+        string s;
+        cin.ignore();
+        getline(cin, s);
+
+
+        int end = n-1 ;
+
+        string s1, s2, s3, s4, s5, s6, s7, s8;
+
+        std::string s10(1,s[0]);
+        std::string s11(1,s[1]);
+        std::string s12(1,s[2]);
+        std::string s13(1,s[3]);
+
+        s1 = s10+s11+s12+s13;
+
+        std::string s20(1,s[0]);
+        std::string s21(1,s[1]);
+        std::string s22(1,s[2]);
+        std::string s23(1,s[end]);
+
+        s2 = s20+s21+s22+s23;
+
+        std::string s30(1,s[0]);
+        std::string s31(1,s[1]);
+        std::string s32(1,s[end-1]);
+        std::string s33(1,s[end]);
+
+        s3 = s30+s31+s32+s33;
+
+        std::string s40(1,s[0]);
+        std::string s41(1,s[end-2]);
+        std::string s42(1,s[end-1]);
+        std::string s43(1,s[end]);
+
+        s4 = s40+s41+s42+s43;
+
+        std::string s50(1,s[end-3]);
+        std::string s51(1,s[end-2]);
+        std::string s52(1,s[end-1]);
+        std::string s53(1,s[end]);
+
+        s5 = s50+s51+s52+s53;
+
+        if (s1=="2020" || s2=="2020" || s3=="2020"||s4=="2020"||s5=="2020"){
+            cout <<"YES";
+        } else {
+            cout <<"NO";
+        }
+        cout << "\n";
+    }
+    
 }
+
+
+
+
+

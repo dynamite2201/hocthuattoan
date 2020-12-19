@@ -67,7 +67,35 @@ int main() {
     cin.tie(nullptr); cout.tie(nullptr);
     // freopen("input.txt", "r", stdin);
     // freopen("output.txt", "w", stdout);
+    int n;
+    cin>>n;
+    string s;
+    cin.ignore();
+    getline(cin, s);
 
+    int a[100] ={0};
+
+    for(int i=0;i<n;i++) {
+        a[s[i]-'a']++;
+    }
+
+    int res =0;
+
+    for(int i =0;i<100;i++) {
+        if(a[i]>1) {
+            res += (a[i]-1);
+        } 
+    }
+
+    // cout <<res;
+    // cout <<"\n";
+    // cout <<'z'-'a'+1;
+    if(res+n >=('z'-'a'+1+'Z'-'A'+1)) {
+        cout <<-1;
+    } else{
+        cout <<res;
+    }
+    
     // int testCase;
     // cin >> testCase;
 
