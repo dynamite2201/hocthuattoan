@@ -130,7 +130,7 @@ Số <img src="svgs/9c9fdc4c2227dafa78a577c8cc554cd9.svg?invert_in_darkmode" ali
 
 
 **Safty the number**
-https://www.facebook.com/photo?fbid=445261993169183&set=gm.1290318641322088
+
 
 
 
